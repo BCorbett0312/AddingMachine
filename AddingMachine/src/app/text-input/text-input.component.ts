@@ -9,6 +9,7 @@ import {Evaluator} from '../../../evaluator';
 export class TextInputComponent implements OnInit {
 
   result: number;
+  priorCalculations: string = '';
 
   private eval: Evaluator = new Evaluator();
 
@@ -19,7 +20,10 @@ export class TextInputComponent implements OnInit {
   }
 
   runCalc(toParse: string) {
+    this.priorCalculations += '>' + toParse + '\n';
     this.result = this.eval.calculate(toParse);
+    this.priorCalculations += '>>' + this.result + '\n';
+
 
   }
 

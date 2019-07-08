@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+#history {
+  height: 400px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+}
