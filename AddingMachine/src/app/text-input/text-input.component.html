@@ -1,3 +1,9 @@
-<pre>Output goes here. {{log}}</pre>
+
+<div *ngIf="result">
+<pre>The result is: {{result}}</pre>
+</div>
+
 <hr />
-<p>text-input goes here! You need to change this to a text input field.</p>
+  <input #myStringToCalc placeholder = "Enter Stuff"/>
+  <button (click)="runCalc(myStringToCalc.value)">Calculate</button>
+
